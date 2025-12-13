@@ -106,7 +106,7 @@ function About(){
       </div>
     </div>
 
-    {/* Tech Stack */}
+
     <div className="bg-base p-8 rounded-2xl border-2 border-[hsl(160,15%,20%)]">
       <h3 className="text-2xl font-bold text-primary mb-6 text-center">
         Built With

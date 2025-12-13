@@ -3,8 +3,7 @@ import { useState } from 'react'
 import './App.css'
 import Landing from './Landing.jsx'
 import Onboarding from './Onboarding.jsx';
-
-
+import Dashboard from './Dashboard.jsx';
 
 
 function App() {
@@ -18,7 +17,7 @@ function App() {
       return <Onboarding onComplete={() => setCurrentPage('app')} />;
       }
     if (currentPage === 'app') {
-      return <Dashboard />;
+      return <Dashboard onStart={()=> setCurrentPage('landing')} />;
       }
 }
 
