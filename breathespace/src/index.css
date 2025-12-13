@@ -66,3 +66,12 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+
+
+.text-toon,h1,h2,h3,h4,h5,h6,button{
+  /* font-size: 50%; */
+  color: var(--text-primary);
+  -webkit-text-stroke: 2px var(--bg-base);
+  paint-order: stroke fill;
+}

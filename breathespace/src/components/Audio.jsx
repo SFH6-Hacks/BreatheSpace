@@ -28,9 +28,9 @@ export default function AmbientAudio() {
 
       <button
         onClick={toggleAudio}
-        className="w-16 h-16 rounded-full border-2 border-white/20 bg-black/50 backdrop-blur-md 
-                   flex items-center justify-center transition-all duration-300 hover:bg-black/70 
-                   hover:border-white/40 hover:scale-110 shadow-lg"
+        className="w-12 h-12 bg-base border rounded-full
+                    flex items-center justify-center
+                    hover:scale-110 shadow-lg"
         aria-label="Toggle ambient audio"
       >
         <span className="text-2xl">
