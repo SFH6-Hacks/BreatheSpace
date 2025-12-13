@@ -5,8 +5,115 @@
   max-height: 100%;
   height: 100%;
   width: 100%;
-
+  flex-direction: column;
   margin: 0;
   /* padding: 2rem; */
   text-align: center;
+}
+
+
+:root{
+  /* --primary: #8C59C0;
+  --text: #EBE8ED;
+  --bg-light: #1F1B22;
+  --bg-base: #141217;
+  --bg-dark: #0D0B0E; */
+
+  --bg-dark: hsl(270, 12%, 5%);
+  --bg-base: hsl(270, 12%, 8%);
+  --bg-light: hsl(270, 12%, 12%);
+  
+  --text-primary: hsl(270, 12%, 92%);
+  --text-muted: hsl(270, 12%, 65%);
+  
+  --border: hsl(270, 12%, 18%);
+  --highlight: hsl(270, 12%, 25%);
+  
+  --primary: hsl(270, 45%, 55%);
+  --primary-hover: hsl(270, 45%, 65%);
+}
+[data-theme="light"] {
+  /* --primary: #6B46C1;
+  --text: #1A202C;
+  --bg-light: #E9D8FD;
+  --bg-base: #FFFFFF;
+  --bg-dark: #D6BCFA; */
+  --bg-dark: hsl(270, 12%, 98%);
+  --bg-base: hsl(270, 12%, 95%);
+  --bg-light: hsl(270, 12%, 100%);
+  
+  --text-primary: hsl(270, 12%, 10%);
+  --text-muted: hsl(270, 12%, 45%);
+  
+  --border: hsl(270, 12%, 88%);
+  --highlight: hsl(270, 12%, 100%);
+  
+  --primary: hsl(270, 40%, 45%);
+  --primary-hover: hsl(270, 40%, 35%);
+}
+
+.bg-dark{
+  background-color: var(--bg-dark);
+}
+.bg-base{
+  background-color: var(--bg-base);
+}
+.bg-light{
+  background-color: var(--bg-light);
+}
+.text-primary{
+  color: var(--text-primary);
+}
+.text-muted{
+  color: var(--text-muted);
+}
+.border{
+  border-color: var(--border);
+}
+.border-highlight{
+  border-color: var(--highlight);
+}
+.text-primary-hover:hover{
+  color: var(--primary-hover);
+}
+.bg-primary{
+  background-color: var(--primary);
+}
+.bg-primary-hover:hover{
+  background-color: var(--primary-hover);
+}
+/* body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+} */
+body{
+  font-weight: 300;
+  /* font-family: Overpass, sans-serif; */ 
+  font-family: 'plus jakarta sans', sans-serif;
+}
+
+/* .masc{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    transparent 0%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.7) 100%
+  );
+  pointer-events: none;
+
+} */
+.masc{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0 0 150px 50px var(--primary);
+  /* pointer-events: none; */
+  /* z-index: -2; */
 }
