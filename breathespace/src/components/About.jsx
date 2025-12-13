@@ -4,7 +4,7 @@ function About(){
     return(
         // Add this below your hero section in App.jsx
 
-<section className="text-toon relative bg-base py-20 px-6">
+<section className="text-toon relative bg-dark py-20 px-6 about-section" id="about">
   <div className="max-w-6xl mx-auto">
     
    
@@ -70,15 +70,23 @@ function About(){
         The Team
       </h3>
       <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-        <div className="bg-[hsl(160,8%,12%)] p-6 rounded-xl border-2 border-[hsl(160,15%,20%)] hover:border-[hsl(160,45%,55%)] transition">
+        <div className="bg-base p-6 rounded-xl border-2 border-[hsl(160,15%,20%)] hover:border-[hsl(160,45%,55%)] transition">
           <div className="w-24 h-24 mx-auto mb-4 bg-[hsl(160,45%,55%)] rounded-full flex items-center justify-center text-4xl">
             👤
           </div>
-          <h4 className="text-xl font-bold text-white mb-2">@m1c-dev</h4>
+          <h4 className="text-xl font-bold text-white mb-2">Mircea Savan-Bucrestian(@m1c-dev)</h4>
           <p className="text-gray-400 text-sm">Developer</p>
         </div>
         
-        <div className="bg-[hsl(160,8%,12%)] p-6 rounded-xl border-2 border-[hsl(160,15%,20%)] hover:border-[hsl(160,45%,55%)] transition">
+        <div className="bg-base p-6 rounded-xl border-2 border-[hsl(160,15%,20%)] hover:border-[hsl(160,45%,55%)] transition">
+          <div className="w-24 h-24 mx-auto mb-4 bg-[hsl(160,45%,55%)] rounded-full flex items-center justify-center text-4xl">
+            👤
+          </div>
+          <h4 className="text-xl font-bold text-white mb-2">Ashley Hassell</h4>
+          <p className="text-gray-400 text-sm">Developer</p>
+        </div>
+
+        <div className="bg-base p-6 rounded-xl border-2 border-[hsl(160,15%,20%)] hover:border-[hsl(160,45%,55%)] transition">
           <div className="w-24 h-24 mx-auto mb-4 bg-[hsl(160,45%,55%)] rounded-full flex items-center justify-center text-4xl">
             👤
           </div>
@@ -86,7 +94,9 @@ function About(){
           <p className="text-gray-400 text-sm">Developer</p>
         </div>
 
-        <div className="bg-[hsl(160,8%,12%)] p-6 rounded-xl border-2 border-[hsl(160,15%,20%)] hover:border-[hsl(160,45%,55%)] transition">
+        
+
+        <div className="bg-base p-6 rounded-xl border-2 border-[hsl(160,15%,20%)] hover:border-[hsl(160,45%,55%)] transition">
           <div className="w-24 h-24 mx-auto mb-4 bg-[hsl(270,45%,55%)] rounded-full flex items-center justify-center text-4xl">
             🤖
           </div>
@@ -97,17 +107,17 @@ function About(){
     </div>
 
     {/* Tech Stack */}
-    <div className="bg-[hsl(160,8%,12%)] p-8 rounded-2xl border-2 border-[hsl(160,15%,20%)]">
-      <h3 className="text-2xl font-bold text-white mb-6 text-center" style={{WebkitTextStroke: '1.5px black'}}>
+    <div className="bg-base p-8 rounded-2xl border-2 border-[hsl(160,15%,20%)]">
+      <h3 className="text-2xl font-bold text-primary mb-6 text-center">
         Built With
       </h3>
       <div className="flex flex-wrap justify-center gap-4">
-        <span className="px-4 py-2 bg-[hsl(160,8%,15%)] text-white rounded-lg border border-[hsl(160,15%,25%)]">React + Vite</span>
-        <span className="px-4 py-2 bg-[hsl(160,8%,15%)] text-white rounded-lg border border-[hsl(160,15%,25%)]">Tailwind CSS</span>
-        <span className="px-4 py-2 bg-[hsl(160,8%,15%)] text-white rounded-lg border border-[hsl(160,15%,25%)]">AI (Groq/Qwen)</span>
-        <span className="px-4 py-2 bg-[hsl(160,8%,15%)] text-white rounded-lg border border-[hsl(160,15%,25%)]">Spline 3D</span>
-        <span className="px-4 py-2 bg-[hsl(160,8%,15%)] text-white rounded-lg border border-[hsl(160,15%,25%)]">Figma</span>
-        <span className="px-4 py-2 bg-[hsl(160,8%,15%)] text-white rounded-lg border border-[hsl(160,15%,25%)]">GitHub</span>
+        <span className="px-4 py-2 bg-light text-white rounded-lg border">React + Vite</span>
+        <span className="px-4 py-2 bg-light text-white rounded-lg border">Tailwind CSS</span>
+        <span className="px-4 py-2 bg-light text-white rounded-lg border">AI (Groq/Qwen)</span>
+        <span className="px-4 py-2 bg-light text-white rounded-lg border">Spline 3D</span>
+        <span className="px-4 py-2 bg-light text-white rounded-lg border">Figma</span>
+        <span className="px-4 py-2 bg-light text-white rounded-lg border">GitHub</span>
       </div>
     </div>
 

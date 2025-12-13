@@ -125,3 +125,29 @@ body{
   -webkit-text-stroke: 2px var(--bg-base);
   paint-order: stroke fill;
 }
+
+
+.about-section{
+  position: relative;
+  overflow: hidden;
+}
+
+.about-section::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    color-mix(in srgb, var(--primary) 20%, transparent) 0%,
+    transparent 40%,
+    transparent 100%
+  );
+  z-index: 1;
+  border-radius: inherit;
+}
+
+
