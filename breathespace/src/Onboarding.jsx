@@ -57,7 +57,7 @@ function AskName({ name, onNameChange, onGetName, onGuestContinue }) {
         }
     }
     return (
-        <div className="min-h-screen bg-base flex">
+        <div className="min-h-screen bg-base flex text-toon">
     
             <div className="w-full lg:w-2/3 flex items-center justify-center px-8 py-12">
                 <div className="w-full max-w-md space-y-8">
@@ -237,19 +237,25 @@ function MoodCheck({ onComplete, onBack, userName }) {
     );
 }
 
-function Onboarding({ onComplete }) {
+function Onboarding({ onComplete , onAccountCreate}) {
     const [onboardingStep, setOnboardingStep] = useState(1);
     const [name, setName] = useState("");
     
     const handleGuestContinue = () => {
         setName('Guest');
+        localStorage.setItem('name', 'Secret-Cereal-King');
         setOnboardingStep(2);
     };
-    const handleNameChange = (newName) => {
-        setName(newName);
-        setOnboardingStep(2);
+    // const handleNameChange = (newName) => {
+    //     setName(newName);
+    //     setOnboardingStep(2);
 
-    };
+    // };
+    const accountComplete = () =>{
+        onAccountCreate();
+        onComplete();
+        localStorage.setItem('name', name);
+    }
     
     if (onboardingStep === 1) {
         return (
@@ -266,7 +272,7 @@ function Onboarding({ onComplete }) {
         return (
             <MoodCheck 
                 userName={name}
-                onComplete={onComplete} 
+                onComplete={accountComplete} 
                 onBack={() => setOnboardingStep(1)} 
             />
         );

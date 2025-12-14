@@ -1,5 +1,5 @@
 import Mascot from "./components/Mascot.jsx";
-import Audio from "./components/Audio.jsx";
+
 import About from "./components/About.jsx";
 
 function Front({ onStart }) {
@@ -29,7 +29,7 @@ function Landing({ onStart }) {
         </div>
         <About />
       
-      <Audio />
+      {/* <Audio /> */}
     </>
   );
 }
