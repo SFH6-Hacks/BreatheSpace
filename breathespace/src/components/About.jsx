@@ -71,7 +71,7 @@ function About(){
       </h3>
       <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
         <div className="bg-base p-6 rounded-xl border-2 border-[var(--primary)] hover:border-white transition">
-          <div className="w-24 h-24 mx-auto mb-4 bg-[hsl(160,45%,55%)] rounded-full flex items-center justify-center text-4xl">
+          <div className="w-24 h-24 mx-auto mb-4 bg-[var(--primary)] rounded-full flex items-center justify-center text-4xl">
             👤
           </div>
           <h4 className="text-xl font-bold text-white mb-2">Mircea Savan-Bucrestian(@m1c-dev)</h4>
@@ -80,7 +80,7 @@ function About(){
         </div>
         
         <div className="bg-base p-6 rounded-xl border-2 border-[var(--primary)] hover:border-white transition">
-          <div className="w-24 h-24 mx-auto mb-4 bg-[hsl(160,45%,55%)] rounded-full flex items-center justify-center text-4xl">
+          <div className="w-24 h-24 mx-auto mb-4 bg-[var(--primary)] rounded-full flex items-center justify-center text-4xl">
             👤
           </div>
           <h4 className="text-xl font-bold text-white mb-2">Ashley Hassell</h4>
@@ -88,14 +88,14 @@ function About(){
         </div>
 
  <div className="bg-base p-6 rounded-xl border-2 border-[var(--primary)] hover:border-white transition">
-          <div className="w-24 h-24 mx-auto mb-4 bg-[hsl(160,45%,55%)] rounded-full flex items-center justify-center text-4xl">
+          <div className="w-24 h-24 mx-auto mb-4 bg-[var(--primary)] rounded-full flex items-center justify-center text-4xl">
             👤
           </div>
           <h4 className="text-xl font-bold text-white mb-2">Mary</h4>
           <p className="text-gray-400 text-sm">Rep</p>
         </div>
         <div className="bg-base p-6 rounded-xl border-2 border-[var(--primary)] hover:border-white transition">
-          <div className="w-24 h-24 mx-auto mb-4 bg-[hsl(160,45%,55%)] rounded-full flex items-center justify-center text-4xl">
+          <div className="w-24 h-24 mx-auto mb-4 bg-[var(--primary)] rounded-full flex items-center justify-center text-4xl">
             👤
           </div>
           <h4 className="text-xl font-bold text-white mb-2">@the-cerealdev</h4>
@@ -115,7 +115,7 @@ function About(){
     </div>
 
 
-    <div className="bg-base p-8 rounded-2xl border-2 border-[hsl(160,15%,20%)]">
+    <div className="bg-base p-8 rounded-2xl border-2 border-[var(--primary)] text-center">
       <h3 className="text-2xl font-bold text-primary mb-6 text-center">
         Built With
       </h3>
@@ -132,7 +132,7 @@ function About(){
 
     <div className="text-center mt-12">
       <p className="text-gray-400 text-sm">
-        Created for <strong className="text-[hsl(160,45%,55%)]">WCTD Hackathon 2025 Contact: ajedavid1@gmail.com <a></a> </strong>
+        Created for <strong className="text-[var(--primary)]">WCTD Hackathon 2025 Contact: ajedavid1@gmail.com <a href='https://github.com/SFH6-Hacks/BreatheSpace/tree/main/breathespace'>github profile</a> <a href='https://www.linkedin.com/in/cerealdev/'> LinkedIn</a></strong>
       </p>
     </div>
 
