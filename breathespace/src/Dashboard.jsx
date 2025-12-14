@@ -318,7 +318,7 @@ const handleSaveDiaryEntry = (entry) => {
          />
           </div>
 
-          {/* Test controls for judges */}
+         
           <div className="pt-2 border-t border-border mt-2">
     <div className="text-xs text-muted mb-2">Demo Controls</div>
     <div className="flex gap-2">
@@ -344,7 +344,6 @@ const handleSaveDiaryEntry = (entry) => {
   </div>
         </div>
 
-        {/* Recent Entries */}
         <div className="lg:col-span-2 bg-base p-6 rounded-none border-r-4 border-primary">
           <h3 className="text-xl font-bold text-primary mb-4 text-toon">
             Recent Entries
@@ -361,12 +360,10 @@ const handleSaveDiaryEntry = (entry) => {
 ) : (
   <p className="text-muted text-sm">No journal entries yet. Start writing!</p>
 )}
-          {/* <button className="w-full mt-4 p-2 bg-light hover:bg-base text-primary font-bold rounded-none border border-border transition">
-            View All Entries
-          </button> */}
+          
         </div>
 
-        {/* Premium Upsell */}
+        
         <div className="lg:col-span-3 bg-base p-8 rounded-none border-4 border-primary relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/50 backdrop-blur-sm"></div>
           <div className="relative z-10">

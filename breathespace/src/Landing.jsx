@@ -6,7 +6,7 @@ function Front({ onStart, onStartNew, accountMade }) {
     <>
       <div className="container z-10 flex flex-col justify-center items-center mx-auto gap-8 my-auto">
         <h1 className="relative">BreatheSpace</h1>
-
+        <p className="text-toon">Your Breathing Space in between classes and life</p>
         {accountMade ? (
           <div className="flex flex-col gap-3 w-1/2 mx-auto">
             <button

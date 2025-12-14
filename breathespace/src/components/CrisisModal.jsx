@@ -61,7 +61,7 @@ export default function CrisisModal({ isOpen, onClose }) {
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
       <div className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-base border-4 border-[#dc2626] rounded-none">
 
-        {/* Header */}
+    
         <div className="sticky top-0 bg-[#dc2626] p-6 flex justify-between items-center">
           <h2 className="text-3xl font-black text-white text-toon">
             🆘 Crisis Resources
@@ -75,7 +75,7 @@ export default function CrisisModal({ isOpen, onClose }) {
           </button>
         </div>
 
-        {/* Emergency Banner */}
+     
         <div className="bg-[#7f1d1d] p-6 text-white">
           <p className="text-lg font-bold mb-2">
             If you're in immediate danger, call emergency services:
@@ -93,7 +93,7 @@ export default function CrisisModal({ isOpen, onClose }) {
           </div>
         </div>
 
-        {/* Main Crisis Lines */}
+
         <div className="p-6 space-y-4">
           <h3 className="text-2xl font-bold text-primary mb-4 text-toon">
             24/7 Crisis Support (US)
@@ -121,7 +121,7 @@ export default function CrisisModal({ isOpen, onClose }) {
           </div>
         </div>
 
-        {/* International Resources */}
+
         <div className="p-6 bg-light space-y-4">
           <h3 className="text-2xl font-bold text-primary mb-4 text-toon">
             International Support
@@ -204,7 +204,7 @@ export default function CrisisModal({ isOpen, onClose }) {
           </div>
         </div>
 
-        {/* Safety Message */}
+   
         <div className="p-6 bg-base border-t-2 border-border">
           <p className="text-muted text-center">
             <strong className="text-primary">You are not alone.</strong> These

@@ -15,19 +15,19 @@ export default function DiaryModal({ isOpen, onClose, onSave }) {
       date: new Date().toLocaleString(),
     };
 
-    // Call parent callback
+
     onSave(newEntry);
 
-    // Clear input
+
     setEntryText("");
-    onClose(); // optionally close modal after save
+    onClose();
   };
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4">
       <div className="w-full max-w-2xl h-[60vh] bg-base border border-highlight rounded-xl flex flex-col overflow-hidden">
 
-        {/* Header */}
+ 
         <div className="flex items-center justify-between px-5 py-4 border-b border-highlight bg-dark">
           <h2 className="text-primary font-semibold text-lg">
             📝 New Diary Entry
@@ -41,7 +41,7 @@ export default function DiaryModal({ isOpen, onClose, onSave }) {
           </button>
         </div>
 
-        {/* Textarea */}
+      
         <div className="flex-1 p-4">
           <textarea
             value={entryText}
@@ -51,7 +51,7 @@ export default function DiaryModal({ isOpen, onClose, onSave }) {
           />
         </div>
 
-        {/* Save Button */}
+     
         <div className="p-4 border-t border-highlight bg-dark">
           <button
             onClick={handleSave}
