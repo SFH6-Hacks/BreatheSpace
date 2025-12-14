@@ -20,6 +20,7 @@ function AskName({ name, onNameChange, onGetName, onGuestContinue }) {
                         <h1 className="text-4xl font-bold text-primary">
                             Welcome! 👋
                         </h1>
+                        {/* <span className="">☻</span> */}
                         <p className="text-lg text-muted">
                             Let's get started on your mental health journey
                         </p>

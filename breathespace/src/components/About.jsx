@@ -26,7 +26,7 @@ function About(){
         <p className="text-gray-300 text-lg leading-relaxed">
           <strong className="text-red-400">1 in 7 students</strong> struggle with mental health. 
           School counseling has <strong className="text-red-400">2-6 month waitlists</strong>. 
-          Therapy apps cost $60-90/week. Students need support <em>now</em>, not later.
+          Therapy apps cost GBP 60-90/week. Students need support <em>now</em>, not later.
         </p>
       </div>
 
@@ -70,7 +70,7 @@ function About(){
         The Team
       </h3>
       <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-        <div className="bg-base p-6 rounded-xl border-2 border-[hsl(160,15%,20%)] hover:border-[hsl(160,45%,55%)] transition">
+        <div className="bg-base p-6 rounded-xl border-2 border-[var(--primary)] hover:border-white transition">
           <div className="w-24 h-24 mx-auto mb-4 bg-[hsl(160,45%,55%)] rounded-full flex items-center justify-center text-4xl">
             👤
           </div>
@@ -79,22 +79,22 @@ function About(){
 
         </div>
         
-        <div className="bg-base p-6 rounded-xl border-2 border-[hsl(160,15%,20%)] hover:border-[hsl(160,45%,55%)] transition">
+        <div className="bg-base p-6 rounded-xl border-2 border-[var(--primary)] hover:border-white transition">
           <div className="w-24 h-24 mx-auto mb-4 bg-[hsl(160,45%,55%)] rounded-full flex items-center justify-center text-4xl">
             👤
           </div>
           <h4 className="text-xl font-bold text-white mb-2">Ashley Hassell</h4>
-          <p className="text-gray-400 text-sm">Developer</p>
+          <p className="text-gray-400 text-sm">Idea</p>
         </div>
 
- <div className="bg-base p-6 rounded-xl border-2 border-[hsl(160,15%,20%)] hover:border-[hsl(160,45%,55%)] transition">
+ <div className="bg-base p-6 rounded-xl border-2 border-[var(--primary)] hover:border-white transition">
           <div className="w-24 h-24 mx-auto mb-4 bg-[hsl(160,45%,55%)] rounded-full flex items-center justify-center text-4xl">
             👤
           </div>
           <h4 className="text-xl font-bold text-white mb-2">Mary</h4>
           <p className="text-gray-400 text-sm">Rep</p>
         </div>
-        <div className="bg-base p-6 rounded-xl border-2 border-[hsl(160,15%,20%)] hover:border-[hsl(160,45%,55%)] transition">
+        <div className="bg-base p-6 rounded-xl border-2 border-[var(--primary)] hover:border-white transition">
           <div className="w-24 h-24 mx-auto mb-4 bg-[hsl(160,45%,55%)] rounded-full flex items-center justify-center text-4xl">
             👤
           </div>
@@ -104,7 +104,7 @@ function About(){
 
         
 
-        <div className="bg-base p-6 rounded-xl border-2 border-[hsl(160,15%,20%)] hover:border-[hsl(160,45%,55%)] transition">
+        <div className="bg-base p-6 rounded-xl border-2 border-[var(--primary)] hover:border-white transition">
           <div className="w-24 h-24 mx-auto mb-4 bg-[hsl(270,45%,55%)] rounded-full flex items-center justify-center text-4xl">
             🤖
           </div>
@@ -132,7 +132,7 @@ function About(){
 
     <div className="text-center mt-12">
       <p className="text-gray-400 text-sm">
-        Created for <strong className="text-[hsl(160,45%,55%)]">WCTD Hackathon 2025</strong>
+        Created for <strong className="text-[hsl(160,45%,55%)]">WCTD Hackathon 2025 Contact: ajedavid1@gmail.com <a></a> </strong>
       </p>
     </div>
 

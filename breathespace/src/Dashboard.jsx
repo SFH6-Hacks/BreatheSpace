@@ -198,7 +198,7 @@ const handleSaveDiaryEntry = (entry) => {
 
   return (
     <div className="min-h-screen bg-dark p-6 text-toon">
-      {/* Header */}
+   #
       <div className="max-w-7xl mx-auto mb-8">
         <div className="flex justify-between items-center">
           <h1 className="text-4xl font-black text-primary">
@@ -221,7 +221,7 @@ const handleSaveDiaryEntry = (entry) => {
       </div>
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {/* Mood Selector */}
+   
         <div className="lg:col-span-2 bg-base p-8 rounded-none border-l-4 border-primary clip-path-slant">
           <h2 className="text-2xl font-bold text-primary mb-6 text-toon">
             {selectedMood ? "You've checked in today!" : "How are you feeling?"}
@@ -249,7 +249,7 @@ const handleSaveDiaryEntry = (entry) => {
           )}
         </div>
 
-        {/* Streak Counter */}
+
         <div className="bg-base p-6 rounded-none border-r-4 border-highlight clip-path-slant-reverse">
           <h3 className="text-xl font-bold text-primary mb-4">
             Your Progress
@@ -270,7 +270,7 @@ const handleSaveDiaryEntry = (entry) => {
           </div>
         </div>
 
-        {/* Week Timeline */}
+
         <div className="lg:col-span-3 bg-base p-6 rounded-none border-t-4 border-primary">
           <h3 className="text-xl font-bold text-primary mb-4 text-toon">
             Your Week
