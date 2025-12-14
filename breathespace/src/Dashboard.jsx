@@ -27,7 +27,8 @@ export default function Dashboard({ onStart }) {
 
     // Load journal entries
     const storedEntries = JSON.parse(localStorage.getItem('journalEntries') || '[]');
-    setRecentEntries(storedEntries.slice(-3).reverse());
+    // Keep full list (most recent first if stored that way); allow scrolling in the UI
+    setRecentEntries(storedEntries);
 
     // Check if already checked in today
     const lastCheckIn = localStorage.getItem('lastCheckIn');
@@ -127,8 +128,8 @@ const handleSaveDiaryEntry = (entry) => {
   const updatedEntries = [entry, ...storedEntries];
   localStorage.setItem('journalEntries', JSON.stringify(updatedEntries));
 
-  // Update recent entries (last 3)
-  setRecentEntries(updatedEntries.slice(0, 3));
+  // Update recent entries (show full list so the user can scroll through them)
+  setRecentEntries(updatedEntries);
 };
 
   return (
@@ -262,7 +263,7 @@ const handleSaveDiaryEntry = (entry) => {
           {recentEntries.length > 0 ? (
   <div className="space-y-3 max-h-64 overflow-y-auto pr-2">
     {recentEntries.map((entry, i) => (
-      <div key={i} className="p-3 bg-light border-l-2 border-primary">
+      <div key={entry.id ?? i} className="p-3 bg-light border-l-2 border-primary">
         <p className="text-primary text-sm">{entry.title || entry.text?.slice(0, 50) + '...'}</p>
         <p className="text-muted text-xs mt-1">{entry.date}</p>
       </div>
