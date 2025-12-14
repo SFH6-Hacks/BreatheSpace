@@ -132,7 +132,7 @@ function About(){
 
     <div className="text-center mt-12">
       <p className="text-gray-400 text-sm">
-        Created for <strong className="text-[hsl(160,45%,55%)]">WCTD Hackathon 2025</strong> • December 6-13, 2025
+        Created for <strong className="text-[hsl(160,45%,55%)]">WCTD Hackathon 2025</strong>
       </p>
     </div>
 
