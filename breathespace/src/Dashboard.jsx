@@ -132,6 +132,70 @@ const handleSaveDiaryEntry = (entry) => {
   setRecentEntries(updatedEntries);
 };
 
+  // --- TEST CONTROLS: simulate days for demo/judges ---
+  const simulateDays = (count = 1) => {
+    const DAY = 24 * 60 * 60 * 1000;
+    const storedLast = localStorage.getItem('lastCheckIn');
+    // start from the last recorded check-in (or today if none)
+    let last = storedLast ? new Date(storedLast) : new Date();
+    let newHistory = [...moodHistory];
+    let newStreak = streak;
+    let newTotal = totalDays;
+
+    // choose a demo mood for the simulated past entries (fallback)
+    const demoMoodEmoji = selectedMood || '😊';
+
+    for (let i = 0; i < count; i++) {
+      const nextDate = new Date(last.getTime() + DAY);
+
+      const entry = {
+        mood: demoMoodEmoji,
+        date: nextDate.toDateString(),
+        timestamp: nextDate.getTime()
+      };
+
+      // append simulated past entry
+      newHistory = [...newHistory, entry];
+      newTotal = newTotal + 1;
+      // treat simulated days as consecutive for demo purposes
+      newStreak = newStreak + 1;
+
+      last = nextDate;
+    }
+
+    // persist simulated history
+    localStorage.setItem('moodHistory', JSON.stringify(newHistory));
+    localStorage.setItem('streak', newStreak.toString());
+    localStorage.setItem('totalDays', newTotal.toString());
+
+    // IMPORTANT: set lastCheckIn to the last simulated day MINUS one day
+    // so "today" remains un-checked and the UI will prompt the user to pick a new mood.
+    const lastCheckInForUi = new Date(last.getTime() - DAY).toDateString();
+    localStorage.setItem('lastCheckIn', lastCheckInForUi);
+
+    // remove any stored todayMood so UI doesn't auto-fill the emoji
+    localStorage.removeItem('todayMood');
+
+    // update UI state
+    setMoodHistory(newHistory);
+    setStreak(newStreak);
+    setTotalDays(newTotal);
+    setSelectedMood(null); // ensure mood selector is active for the new day
+  };
+
+  const simulateNextDay = () => simulateDays(1);
+  const simulateSevenDays = () => simulateDays(7);
+
+  const resetAllStats = () => {
+    const keys = ['moodHistory', 'lastCheckIn', 'todayMood', 'streak', 'totalDays', 'journalEntries'];
+    keys.forEach(k => localStorage.removeItem(k));
+    setMoodHistory([]);
+    setSelectedMood(null);
+    setStreak(0);
+    setTotalDays(0);
+    setRecentEntries([]);
+  };
+
   return (
     <div className="min-h-screen bg-dark p-6 text-toon">
       {/* Header */}
@@ -253,6 +317,31 @@ const handleSaveDiaryEntry = (entry) => {
         onClose={() => setIsCrisisOpen(false)}
          />
           </div>
+
+          {/* Test controls for judges */}
+          <div className="pt-2 border-t border-border mt-2">
+    <div className="text-xs text-muted mb-2">Demo Controls</div>
+    <div className="flex gap-2">
+      <button
+        onClick={simulateNextDay}
+        className="flex-1 px-3 py-2 bg-base text-primary border border-border rounded-md hover:bg-light transition"
+      >
+        Simulate +1 Day
+      </button>
+      <button
+        onClick={simulateSevenDays}
+        className="flex-1 px-3 py-2 bg-base text-primary border border-border rounded-md hover:bg-light transition"
+      >
+        Simulate +7 Days
+      </button>
+    </div>
+    <button
+      onClick={resetAllStats}
+      className="w-full mt-2 px-3 py-2 bg-[#dc2626] text-white rounded-md hover:bg-[#b91c1c] transition"
+    >
+      Reset Stats
+    </button>
+  </div>
         </div>
 
         {/* Recent Entries */}
