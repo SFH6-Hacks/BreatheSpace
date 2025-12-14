@@ -115,7 +115,7 @@ function AskName({ name, onNameChange, onGetName, onGuestContinue }) {
                                 onClick={() => alert('Snapchat sign-in coming soon!')}
                                 className="w-1/3 px-6 py-3 bg-light text-primary rounded-lg border border-[var(--border)] hover:border-[var(--primary)] transition-all duration-200 flex items-center justify-center gap-3"
                             >
-                                <FaSnapchatGhost className="w-6 h-6 text-yellow-400" />
+                                <FaSnapchatGhost className="w-6 h-6 text-yellow-200" />
                                 <span>Snapchat</span>
                             </button>
                             
@@ -124,7 +124,7 @@ function AskName({ name, onNameChange, onGetName, onGuestContinue }) {
                                 disabled={!name.trim()}
                                 className="w-full px-6 py-3 bg-light text-primary rounded-lg border border-[var(--border)] hover:border-[var(--primary)] transition-all duration-200 flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed"
                             >
-                                <span className="text-xl">📧</span>
+                                <FaEnvelope className='w-6 h-6 text-white' />
                                 <span>Continue with Email</span>
                             </button>
                         </div>
@@ -157,8 +157,8 @@ function AskName({ name, onNameChange, onGetName, onGuestContinue }) {
     );
 }
 
-function MoodCheck({ onComplete, onBack, userName }) {
-    const [mood, setMood] = useState("");
+function MoodCheck({ onComplete, onBack, userName, onMoodChange, mood }) {
+    // const [mood, setMood] = useState("");
     
     const moods = [
         { emoji: '😊', label: 'Happy', value: 'happy' },
@@ -171,9 +171,10 @@ function MoodCheck({ onComplete, onBack, userName }) {
         { emoji: '😌', label: 'Calm', value: 'calm' }
     ];
 
+    
     return (
         <div className="min-h-screen bg-base flex">
-            {/* Left side - Mood Selection (2/3) */}
+       
             <div className="w-full lg:w-2/3 flex items-center justify-center px-8 py-12">
                 <div className="w-full max-w-2xl space-y-8">
                     <div className="space-y-3 text-center lg:text-left">
@@ -185,12 +186,12 @@ function MoodCheck({ onComplete, onBack, userName }) {
                         </p>
                     </div>
 
-                    {/* Mood Grid */}
+             
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                         {moods.map((m) => (
                             <button
                                 key={m.value}
-                                onClick={() => setMood(m.value)}
+                                onClick={() => onMoodChange([m.value,m.emoji])}
                                 className={`p-6 rounded-xl border-2 transition-all duration-200 flex flex-col items-center gap-3 ${
                                     mood === m.value
                                         ? 'border-[var(--primary)] bg-[var(--highlight)]'
@@ -240,6 +241,7 @@ function MoodCheck({ onComplete, onBack, userName }) {
 function Onboarding({ onComplete , onAccountCreate}) {
     const [onboardingStep, setOnboardingStep] = useState(1);
     const [name, setName] = useState("");
+    const [mood, setMood] = useState('');
     
     const handleGuestContinue = () => {
         setName('Guest');
@@ -251,10 +253,14 @@ function Onboarding({ onComplete , onAccountCreate}) {
     //     setOnboardingStep(2);
 
     // };
+    const handleMoodChange = () =>{
+
+    }
     const accountComplete = () =>{
         onAccountCreate();
         onComplete();
         localStorage.setItem('name', name);
+        localStorage.setItem('mood', mood);
     }
     
     if (onboardingStep === 1) {
@@ -272,6 +278,8 @@ function Onboarding({ onComplete , onAccountCreate}) {
         return (
             <MoodCheck 
                 userName={name}
+                mood = {mood}
+                onMoodChange = {setMood}
                 onComplete={accountComplete} 
                 onBack={() => setOnboardingStep(1)} 
             />
