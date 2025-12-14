@@ -76,6 +76,7 @@ function About(){
           </div>
           <h4 className="text-xl font-bold text-white mb-2">Mircea Savan-Bucrestian(@m1c-dev)</h4>
           <p className="text-gray-400 text-sm">Developer</p>
+
         </div>
         
         <div className="bg-base p-6 rounded-xl border-2 border-[hsl(160,15%,20%)] hover:border-[hsl(160,45%,55%)] transition">
@@ -86,6 +87,13 @@ function About(){
           <p className="text-gray-400 text-sm">Developer</p>
         </div>
 
+ <div className="bg-base p-6 rounded-xl border-2 border-[hsl(160,15%,20%)] hover:border-[hsl(160,45%,55%)] transition">
+          <div className="w-24 h-24 mx-auto mb-4 bg-[hsl(160,45%,55%)] rounded-full flex items-center justify-center text-4xl">
+            👤
+          </div>
+          <h4 className="text-xl font-bold text-white mb-2">Mary</h4>
+          <p className="text-gray-400 text-sm">Rep</p>
+        </div>
         <div className="bg-base p-6 rounded-xl border-2 border-[hsl(160,15%,20%)] hover:border-[hsl(160,45%,55%)] transition">
           <div className="w-24 h-24 mx-auto mb-4 bg-[hsl(160,45%,55%)] rounded-full flex items-center justify-center text-4xl">
             👤
@@ -114,7 +122,7 @@ function About(){
       <div className="flex flex-wrap justify-center gap-4">
         <span className="px-4 py-2 bg-light text-white rounded-lg border">React + Vite</span>
         <span className="px-4 py-2 bg-light text-white rounded-lg border">Tailwind CSS</span>
-        <span className="px-4 py-2 bg-light text-white rounded-lg border">AI (Groq/Qwen)</span>
+        {/* <span className="px-4 py-2 bg-light text-white rounded-lg border">AI (Groq/Qwen)</span> */}
         <span className="px-4 py-2 bg-light text-white rounded-lg border">Spline 3D</span>
         <span className="px-4 py-2 bg-light text-white rounded-lg border">Figma</span>
         <span className="px-4 py-2 bg-light text-white rounded-lg border">GitHub</span>

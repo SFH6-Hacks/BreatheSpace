@@ -1,10 +1,9 @@
-
 import { useState, useEffect } from 'react';
 import CrisisModal from './components/CrisisModal';
 import ChatModal from './ChatModal';
 import DiaryModal from './components/Diary';
 
-export default function Dashboard() {
+export default function Dashboard({ onStart }) {
   const [selectedMood, setSelectedMood] = useState(null);
   const [moodHistory, setMoodHistory] = useState([]); // Changed from weekMoods
   const [streak, setStreak] = useState(0);
@@ -141,6 +140,13 @@ const handleSaveDiaryEntry = (entry) => {
             Dashboard
           </h1>
           <div className="flex items-center gap-4">
+            <button
+              onClick={onStart}
+              className="px-3 py-2 bg-light text-primary border border-border rounded-md hover:bg-base transition"
+              aria-label="Return to landing"
+            >
+              ← Return to Landing
+            </button>
             <span className="text-muted text-sm">{messagesLeft}/10 msgs left</span>
             <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-xl">
               👤
