@@ -1,49 +1,4 @@
-// import { useState } from "react";
 
-
-// function AskName({ onGetName }) {
-//     let [name, setName] = useState("");
-//     return(
-//         <>
-//             <h1>Onboarding Page - Ask Name</h1>
-//             <label htmlFor="">
-//                 Whats your name? <input type="text" name="" value={name}onChange={(e)=>setName(e.target.value)} className="primary" id="" />
-//             </label>
-            
-//             <button onClick={onGetName}>Submit</button>
-//         </>
-
-//     );
-// }
-
-
-
-// function MoodCheck({ onComplete, onBack }) {
-//     return(
-//         <>
-//             <h1>MoodCheck</h1>
-//             <button onClick={onBack}>Back</button>
-//             <button onClick={onComplete}>Complete Onboarding</button>
-//         </>
-//     );
-// }
-// function Onboarding({ onComplete }) {
-//     let [onboardingStep, setOnboardingStep] = useState(1);
-//     if (onboardingStep === 1) {
-//         return <AskName onGetName={() => setOnboardingStep(2)} />;
-//     }
-//     if (onboardingStep === 2) {
-//         return(
-//             <>
-//                 <MoodCheck onComplete={onComplete} onBack={() => setOnboardingStep(1)} />
-//             </>
-//         );
-//     }
-    
-
-// }
-
-// export default Onboarding;
 import { FcGoogle } from 'react-icons/fc';
 import { FaInstagram, FaSnapchatGhost, FaEnvelope } from 'react-icons/fa';
 
@@ -191,7 +146,7 @@ function MoodCheck({ onComplete, onBack, userName, onMoodChange, mood }) {
                         {moods.map((m) => (
                             <button
                                 key={m.value}
-                                onClick={() => onMoodChange([m.value,m.emoji])}
+                                onClick={() => onMoodChange(m.emoji)}
                                 className={`p-6 rounded-xl border-2 transition-all duration-200 flex flex-col items-center gap-3 ${
                                     mood === m.value
                                         ? 'border-[var(--primary)] bg-[var(--highlight)]'
@@ -261,6 +216,7 @@ function Onboarding({ onComplete , onAccountCreate}) {
         onComplete();
         localStorage.setItem('name', name);
         localStorage.setItem('mood', mood);
+        localStorage.setItem('day',1);
     }
     
     if (onboardingStep === 1) {
@@ -288,3 +244,5 @@ function Onboarding({ onComplete , onAccountCreate}) {
 }
 
 export default Onboarding;
+
+

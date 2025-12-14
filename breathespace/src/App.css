@@ -79,7 +79,7 @@
 .bg-primary{
   background-color: var(--primary);
 }
-.bg-primary-hover:hover{
+.bg-primary-hover:hover{ 
   background-color: var(--primary-hover);
 }
 /* body {
